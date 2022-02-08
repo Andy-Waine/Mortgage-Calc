@@ -1,10 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import { render } from '@testing-library/react';
+import React, { useState } from "react";
+import { render } from "react-dom";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+
 
 const CompoundInterest = () => {
   const [price, setPrice] = useState();
@@ -13,9 +11,10 @@ const CompoundInterest = () => {
   const [months, setMonths] = useState();
 
   const calculate = () => {
-    //formula goes here, replace null
-    const result = null;
+    const result = (price - downPayment) * Math.pow(1 + interestRate, months)
+    setResult(result.toFixed(2));
   };
+
     return (
       <>
         <form>
@@ -43,7 +42,13 @@ const CompoundInterest = () => {
           onChange={(e) => setMonths(e.target.value * 12)}
            />
 
-          <Button variant="contained" color="primary" onClick={() => {}}>
+          <Button 
+            variant="contained" 
+            color="primary" 
+            onClick={() => {
+              calculate();
+            }}
+            >
             Calculate
           </Button>
         </form>
