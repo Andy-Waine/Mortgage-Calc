@@ -6,16 +6,16 @@ import Button from "@material-ui/core/Button";
 
 const CompoundInterest = () => {
   const [price, setPrice] = useState();
-  const [downPayment, setDowmPayment] = useState();
+  const [downPayment, setDownPayment] = useState();
   const [interestRate, setInterestRate] = useState();
   const [months, setMonths] = useState();
   const [result, setResult] = useState();
 
   const calculate = () => {
-    const result = (price - downPayment) * Math.pow(1 + interestRate, months)
+    const result = (interestRate * (price - downPayment)) / (1- (Math.pow((1 + interestRate), (-months))));
     setResult(result.toFixed(2));
   };
-
+    //Note: The interestRate is divided by 1200 because it is divided 100 (percenttodecimal) and by 12 (annual to monthly APR)
     return (
       <>
         <div
@@ -31,7 +31,7 @@ const CompoundInterest = () => {
             <TextField 
             label="Price of Home" 
             variant="outlined"
-            onChange={(e) => setPrincipal(e.target.value)}
+            onChange={(e) => setPrice(e.target.value)}
             />
 
             <TextField 
@@ -43,7 +43,7 @@ const CompoundInterest = () => {
             <TextField 
             label="Ineterest Rate (APR)" 
             variant="outlined"
-            onChange={(e) => setInterestRate(e.target.value / 100)}
+            onChange={(e) => setInterestRate(e.target.value / 1200)}
             />
 
             <TextField 
