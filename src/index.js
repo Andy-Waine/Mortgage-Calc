@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { render } from "react-dom";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import "./index.css"
 
 
 const CompoundInterest = () => {
@@ -89,7 +90,7 @@ const CompoundInterest = () => {
             type="number"
             onChange={(e) => setHoa(e.target.value)}
             />
-
+            <br />
             <br />
             <Button 
               variant="contained" 
@@ -100,6 +101,7 @@ const CompoundInterest = () => {
               >
               Calculate
             </Button>
+            <br />
             <br />
             <div style={{ fontSize: "30px" }}>${result}</div>
           </form>
