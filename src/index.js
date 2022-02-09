@@ -5,15 +5,15 @@ import Button from "@material-ui/core/Button";
 
 
 const CompoundInterest = () => {
-  const [price, setPrice] = useState(0);
-  const [taxes, setTaxes] = useState(0);
+  const [price, setPrice] = useState();
+  const [taxes, setTaxes] = useState();
   const [downPayment, setDownPayment] = useState();
   const [interestRate, setInterestRate] = useState();
   const [months, setMonths] = useState();
   const [result, setResult] = useState();
 
   const calculate = () => {
-    const initialPayment = taxes + (interestRate * (price - downPayment)) / (1- (Math.pow((1 + interestRate), (-months))));
+    const initialPayment = parseInt(taxes) + (interestRate * (price - downPayment)) / (1- (Math.pow((1 + interestRate), (-months))));
     const result = initialPayment;
     setResult(result.toFixed(2));
   };
@@ -33,6 +33,7 @@ const CompoundInterest = () => {
             <TextField 
             label="Price of Home" 
             variant="outlined"
+            type="number"
             onChange={(e) => {
               setPrice(e.target.value);
               console.log(price);
@@ -42,24 +43,28 @@ const CompoundInterest = () => {
             <TextField 
             label="Down Payment" 
             variant="outlined"
+            type="number"
             onChange={(e) => setDownPayment(e.target.value)}
             />
 
             <TextField 
             label="Ineterest Rate (APR)" 
             variant="outlined"
+            type="number"
             onChange={(e) => setInterestRate(e.target.value / 1200)}
             />
 
             <TextField 
             label="Length of Mortgage (Years)" 
             variant="outlined"
+            type="number"
             onChange={(e) => setMonths(e.target.value * 12)}
             />
 
             <TextField 
             label="Tax" 
             variant="outlined"
+            type="number"
             onChange={(e) => setTaxes(e.target.value)}
             />
             <br />
