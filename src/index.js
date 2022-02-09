@@ -4,6 +4,9 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import "./index.css";
 
+
+
+//Master Calculator function with hooks
 const CompoundInterest = () => {
   const [price, setPrice] = useState();
   const [taxes, setTaxes] = useState();
@@ -28,82 +31,72 @@ const CompoundInterest = () => {
     //Note: The interestRate is divided by 1200 because it is divided 100 (percenttodecimal) and by 12 (annual to monthly APR)
     return (
       <>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "40vh",
-          }}
-        >
+        <div className= "glassContainer">
+          <h2 className= "calcHeader">Mortgage Calculator</h2>
+            <form>
+              <TextField 
+              label="Price of Home" 
+              variant="outlined"
+              type="number"
+              onChange={(e) => setPrice(e.target.value)}
+              />
 
-          <form>
-            <TextField 
-            label="Price of Home" 
-            variant="outlined"
-            type="number"
-            onChange={(e) => {
-              setPrice(e.target.value);
-              //console.log(price);
-            }}
-            />
+              <TextField 
+              label="Down Payment ($)" 
+              variant="outlined"
+              type="number"
+              onChange={(e) => setDownPayment(e.target.value)}
+              />
 
-            <TextField 
-            label="Down Payment ($)" 
-            variant="outlined"
-            type="number"
-            onChange={(e) => setDownPayment(e.target.value)}
-            />
+              <TextField 
+              label="Ineterest Rate (APR)" 
+              variant="outlined"
+              type="number"
+              onChange={(e) => setInterestRate(e.target.value / 1200)}
+              />
 
-            <TextField 
-            label="Ineterest Rate (APR)" 
-            variant="outlined"
-            type="number"
-            onChange={(e) => setInterestRate(e.target.value / 1200)}
-            />
+              <TextField 
+              label="Length of Mortgage (Years)" 
+              variant="outlined"
+              type="number"
+              onChange={(e) => setMonths(e.target.value * 12)}
+              />
 
-            <TextField 
-            label="Length of Mortgage (Years)" 
-            variant="outlined"
-            type="number"
-            onChange={(e) => setMonths(e.target.value * 12)}
-            />
+              <TextField 
+              label="Property Tax (Monthly)" 
+              variant="outlined"
+              type="number"
+              onChange={(e) => setTaxes(e.target.value)}
+              />
 
-            <TextField 
-            label="Property Tax (Monthly)" 
-            variant="outlined"
-            type="number"
-            onChange={(e) => setTaxes(e.target.value)}
-            />
+              <TextField 
+              label="Insurance (Monthly)" 
+              variant="outlined"
+              type="number"
+              onChange={(e) => setInsurance(e.target.value)}
+              />
 
-            <TextField 
-            label="Insurance (Monthly)" 
-            variant="outlined"
-            type="number"
-            onChange={(e) => setInsurance(e.target.value)}
-            />
-
-            <TextField 
-            label="HOA Dues (Monthly)" 
-            variant="outlined"
-            type="number"
-            onChange={(e) => setHoa(e.target.value)}
-            />
-            <br />
-            <br />
-            <Button 
-              variant="contained" 
-              color="primary" 
-              onClick={() => {
-                calculate();
-              }}
-              >
-              Calculate
-            </Button>
-            <br />
-            <br />
-            <div style={{ fontSize: "30px" }}>${result}</div>
-          </form>
+              <TextField 
+              label="HOA Dues (Monthly)" 
+              variant="outlined"
+              type="number"
+              onChange={(e) => setHoa(e.target.value)}
+              />
+              <br />
+              <br />
+              <Button 
+                variant="contained" 
+                color="primary" 
+                onClick={() => {
+                  calculate();
+                }}
+                >
+                Calculate
+              </Button>
+              <br />
+              <br />
+              <div style={{ fontSize: "30px" }}>${result}</div>
+            </form>
         </div>
       </>
     );
