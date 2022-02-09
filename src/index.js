@@ -5,14 +5,16 @@ import Button from "@material-ui/core/Button";
 
 
 const CompoundInterest = () => {
-  const [price, setPrice] = useState();
+  const [price, setPrice] = useState(0);
+  const [taxes, setTaxes] = useState(0);
   const [downPayment, setDownPayment] = useState();
   const [interestRate, setInterestRate] = useState();
   const [months, setMonths] = useState();
   const [result, setResult] = useState();
 
   const calculate = () => {
-    const result = (interestRate * (price - downPayment)) / (1- (Math.pow((1 + interestRate), (-months))));
+    const initialPayment = taxes + (interestRate * (price - downPayment)) / (1- (Math.pow((1 + interestRate), (-months))));
+    const result = initialPayment;
     setResult(result.toFixed(2));
   };
     //Note: The interestRate is divided by 1200 because it is divided 100 (percenttodecimal) and by 12 (annual to monthly APR)
@@ -31,7 +33,10 @@ const CompoundInterest = () => {
             <TextField 
             label="Price of Home" 
             variant="outlined"
-            onChange={(e) => setPrice(e.target.value)}
+            onChange={(e) => {
+              setPrice(e.target.value);
+              console.log(price);
+            }}
             />
 
             <TextField 
@@ -50,6 +55,12 @@ const CompoundInterest = () => {
             label="Length of Mortgage (Years)" 
             variant="outlined"
             onChange={(e) => setMonths(e.target.value * 12)}
+            />
+
+            <TextField 
+            label="Tax" 
+            variant="outlined"
+            onChange={(e) => setTaxes(e.target.value)}
             />
             <br />
             <Button 
