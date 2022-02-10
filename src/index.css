@@ -47,25 +47,25 @@ body {
 
 @media screen and (max-width: 320px) {
     .glassContainer {
-        width: 80vw;
+        width: 75vw;
         height: 90vh;
     }
 }
 @media screen and (min-width: 360px) {
     .glassContainer{
-        width: 80vw;
+        width: 75vw;
         height: 90vh;
     }
 }
 @media screen and (min-width: 411px) {
     .glassContainer{
-        width: 80vw;
+        width: 75vw;
         height: 90vh;
     }
 }
 @media screen and (min-width: 768px) {
     .glassContainer{
-        width: 70vw;
+        width: 65vw;
         height: 80vh;
     }
 }
@@ -112,7 +112,6 @@ body {
   width: 80%;
   height: 3rem;
   padding: 1rem;
-  text-align: center;
   border: none;
   outline: none;
   color: #ffffff;
@@ -128,18 +127,23 @@ body {
     width: 48%;
     height: 3rem;
     padding: 1rem;
-    text-align: center;
     border: none;
     outline: none;
     color: #ffffff;
     font-size: 1.5rem;
     font-family: 'Raleway', sans-serif;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.2rem;
   }
 
 .innerInput:focus {
     display: inline-block;
-    box-shadow: 0 0 0 0.2rem #b9abe0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.644);
+    backdrop-filter: blur(12rem);
+    border-radius: 2rem;
+}
+.innerInput-half:focus {
+    display: inline-block;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.644);
     backdrop-filter: blur(12rem);
     border-radius: 2rem;
 }
@@ -148,6 +152,7 @@ body {
     color: whitesmoke;
     font-weight: 100;
     font-size: 1rem;
+    text-align: center;
 }
 
 .buttonContainer{
