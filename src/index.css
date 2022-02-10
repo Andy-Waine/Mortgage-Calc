@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
-/* Removes Input Box Arrows & Spinners Chrome, Safari, Edge, Opera */
+/* Removes Input Box Arrows & Spinners from Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Removes Input Box Arrows and Spinners for Firefox */
+/* Removes Input Box Arrows and Spinners from Firefox */
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -116,8 +116,8 @@ body {
   border: none;
   outline: none;
   color: #ffffff;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
 }
 
 .innerInput-half {
@@ -131,8 +131,8 @@ body {
     border: none;
     outline: none;
     color: #ffffff;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
   }
 
 .innerInput:focus {
