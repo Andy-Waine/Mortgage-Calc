@@ -30,11 +30,14 @@ const CompoundInterest = () => {
   };
     //Note: The interestRate is divided by 1200 because it is divided 100 (percenttodecimal) and by 12 (annual to monthly APR)
     return (
-      <>
-        <div className= "glassContainer">
-          <h2 className= "calcHeader">Mortgage Calculator</h2>
-            <form>
-              <TextField 
+        <div className="glassContainer">
+          <h2 className="calcHeader">Mortgage Calculator</h2>
+            <div className="wrapperInput">
+              <input className="innerInput" type="number"  placeholder="Price of Home" />
+              <input className="innerInput" type="number"  placeholder="Down Payment" />              
+            </div>
+
+              <TextField
               label="Price of Home" 
               variant="outlined"
               type="number"
@@ -96,9 +99,7 @@ const CompoundInterest = () => {
               <br />
               <br />
               <div style={{ fontSize: "30px" }}>${result}</div>
-            </form>
         </div>
-      </>
     );
 };
 
