@@ -33,58 +33,49 @@ const CompoundInterest = () => {
         <div className="glassContainer">
           <h2 className="calcHeader">Mortgage Calculator</h2>
             <div className="wrapperInput">
-              <input className="innerInput" type="number"  placeholder="Price of Home" />
-              <input className="innerInput" type="number"  placeholder="Down Payment" />              
-            </div>
-
-              <TextField
-              label="Price of Home" 
-              variant="outlined"
-              type="number"
+              <input 
+              className="innerInput" 
+              type="number"  
+              placeholder="Price of Home" 
               onChange={(e) => setPrice(e.target.value)}
               />
-
-              <TextField 
-              label="Down Payment ($)" 
-              variant="outlined"
-              type="number"
+              <input 
+              className="innerInput" 
+              type="number"  
+              placeholder="Down Payment ($)" 
               onChange={(e) => setDownPayment(e.target.value)}
-              />
-
-              <TextField 
-              label="Ineterest Rate (APR)" 
-              variant="outlined"
-              type="number"
+              />              
+              <input 
+              className="innerInput" 
+              type="number"  
+              placeholder="Interest Rate (APR)"
               onChange={(e) => setInterestRate(e.target.value / 1200)}
-              />
-
-              <TextField 
-              label="Length of Mortgage (Years)" 
-              variant="outlined"
-              type="number"
+              />              
+              <input 
+              className="innerInput" 
+              type="number"  
+              placeholder="Length of Mortgage (Years)"
               onChange={(e) => setMonths(e.target.value * 12)}
-              />
-
-              <TextField 
-              label="Property Tax (Monthly)" 
-              variant="outlined"
-              type="number"
+              />              
+              <input 
+              className="innerInput" 
+              type="number"  
+              placeholder="Property Taxes" 
               onChange={(e) => setTaxes(e.target.value)}
-              />
-
-              <TextField 
-              label="Insurance (Monthly)" 
-              variant="outlined"
-              type="number"
+              />              
+              <input 
+              className="innerInput" 
+              type="number"  
+              placeholder="Homeowners Insurance" 
               onChange={(e) => setInsurance(e.target.value)}
-              />
-
-              <TextField 
-              label="HOA Dues (Monthly)" 
-              variant="outlined"
-              type="number"
+              />              
+              <input 
+              className="innerInput" 
+              type="number"  
+              placeholder="HOA Dues" 
               onChange={(e) => setHoa(e.target.value)}
-              />
+              />              
+            </div>
               <br />
               <br />
               <Button 
