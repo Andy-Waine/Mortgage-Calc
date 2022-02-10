@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
-import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import "./index.css";
 
@@ -28,7 +27,7 @@ const CompoundInterest = () => {
     const result = paymentPI + paymentTIA;
     setResult(result.toFixed(2));
   };
-    //Note: The interestRate is divided by 1200 because it is divided 100 (percenttodecimal) and by 12 (annual to monthly APR)
+    //Note: The interestRate is divided by 1200 because it is divided 100 (percent to decimal) and by 12 (annual to monthly APR)
     return (
         <div className="glassContainer">
           <h2 className="calcHeader">Mortgage Calculator</h2>
@@ -39,36 +38,40 @@ const CompoundInterest = () => {
               placeholder="Price of Home" 
               onChange={(e) => setPrice(e.target.value)}
               />
+              <div className="half-field-wrapper">
               <input 
-              className="innerInput" 
+              className="innerInput-half" 
               type="number"  
               placeholder="Down Payment ($)" 
               onChange={(e) => setDownPayment(e.target.value)}
               />              
               <input 
-              className="innerInput" 
+              className="innerInput-half" 
               type="number"  
-              placeholder="Interest Rate (APR)"
+              placeholder="Interest Rate (%)"
               onChange={(e) => setInterestRate(e.target.value / 1200)}
-              />              
+              />
+              </div>              
               <input 
               className="innerInput" 
               type="number"  
               placeholder="Length of Mortgage (Years)"
               onChange={(e) => setMonths(e.target.value * 12)}
-              />              
+              />
+              <div className="half-field-wrapper">     
               <input 
-              className="innerInput" 
+              className="innerInput-half" 
               type="number"  
               placeholder="Property Taxes" 
               onChange={(e) => setTaxes(e.target.value)}
               />              
               <input 
-              className="innerInput" 
+              className="innerInput-half" 
               type="number"  
               placeholder="Homeowners Insurance" 
               onChange={(e) => setInsurance(e.target.value)}
-              />              
+              />           
+              </div>
               <input 
               className="innerInput" 
               type="number"  
@@ -77,19 +80,17 @@ const CompoundInterest = () => {
               />              
             </div>
               <br />
-              <br />
-              <Button 
-                variant="contained" 
-                color="primary" 
-                onClick={() => {
-                  calculate();
-                }}
-                >
-                Calculate
-              </Button>
-              <br />
-              <br />
-              <div style={{ fontSize: "30px" }}>${result}</div>
+              <div className="buttonContainer">
+                <Button 
+                  className="buttonStyle"
+                  onClick={() => {
+                    calculate();
+                  }}
+                  >
+                  Calculate
+                </Button>
+              </div>
+              <div class="final-result" style={{ fontSize: "30px" }}>${result}</div>
         </div>
     );
 };

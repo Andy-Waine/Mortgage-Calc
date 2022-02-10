@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
+/* Removes Input Box Arrows & Spinners Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Removes Input Box Arrows and Spinners for Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,40 +43,43 @@ body {
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
-    @media only screen and (max-width: 320px) {
+}
+
+@media screen and (max-width: 320px) {
+    .glassContainer {
         width: 80vw;
         height: 90vh;
-        hr {
-          margin-bottom: 0.3rem;
-        }
-        h4 {
-          font-size: small;
-        }
-      }
-      @media only screen and (min-width: 360px) {
+    }
+}
+@media screen and (min-width: 360px) {
+    .glassContainer{
         width: 80vw;
         height: 90vh;
-        h4 {
-          font-size: small;
-        }
-      }
-      @media only screen and (min-width: 411px) {
+    }
+}
+@media screen and (min-width: 411px) {
+    .glassContainer{
         width: 80vw;
         height: 90vh;
-      }
-    
-      @media only screen and (min-width: 768px) {
-        width: 80vw;
-        height: 80vh;
-      }
-      @media only screen and (min-width: 1024px) {
+    }
+}
+@media screen and (min-width: 768px) {
+    .glassContainer{
         width: 70vw;
-        height: 50vh;
-      }
-      @media only screen and (min-width: 1280px) {
-        width: 30vw;
         height: 80vh;
-      }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .glassContainer{
+        width: 55vw;
+        height: 80vh;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .glassContainer{
+        width: 40vw;
+        height: 80vh;
+    }
 }
 
 .calcHeader {
@@ -82,6 +97,14 @@ body {
     width: 100%;
 }
 
+.half-field-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
 .innerInput {
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -89,12 +112,28 @@ body {
   width: 80%;
   height: 3rem;
   padding: 1rem;
+  text-align: center;
   border: none;
   outline: none;
   color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
 }
+
+.innerInput-half {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 2rem;
+    width: 48%;
+    height: 3rem;
+    padding: 1rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+  }
 
 .innerInput:focus {
     display: inline-block;
@@ -104,7 +143,33 @@ body {
 }
 
 ::placeholder {
-    color: #ffffff;
+    color: whitesmoke;
     font-weight: 100;
     font-size: 1rem;
-  }
+}
+
+.buttonContainer{
+    margin: 1rem 0 2rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonStyle {
+    background: linear-gradient(to right, #3e1192 0%, #fa5393 98%);
+    text-transform: uppercase !important;
+    letter-spacing: 0.2rem !important;
+    width: 65%;
+    height: 3rem;
+    border: none !important;
+    color: white !important;
+    border-radius: 2rem !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+}
+
+.final-result {
+    margin: 1rem 0 4rem 0; 
+}
+
