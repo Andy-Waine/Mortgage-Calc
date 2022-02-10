@@ -118,6 +118,7 @@ body {
   color: #ffffff;
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2rem;
 }
 
 .innerInput-half {
@@ -133,6 +134,7 @@ body {
     color: #ffffff;
     font-size: 1.5rem;
     font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.4rem;
   }
 
 .innerInput:focus {
