@@ -47,25 +47,25 @@ body {
 
 @media screen and (max-width: 320px) {
     .glassContainer {
-        width: 75vw;
+        width: 70vw;
         height: 90vh;
     }
 }
 @media screen and (min-width: 360px) {
     .glassContainer{
-        width: 75vw;
+        width: 70vw;
         height: 90vh;
     }
 }
 @media screen and (min-width: 411px) {
     .glassContainer{
-        width: 75vw;
-        height: 90vh;
+        width: 70vw;
+        height: 85vh;
     }
 }
 @media screen and (min-width: 768px) {
     .glassContainer{
-        width: 65vw;
+        width: 60vw;
         height: 80vh;
     }
 }
