@@ -3,6 +3,9 @@
 ## Description
 🔍 Calculate your full Mortgage Payment with this React/JS-based Mortgage Calculator embedded within a sleek UI.
 
+![image](https://user-images.githubusercontent.com/88730354/153669165-9117f250-fff3-486a-9758-8b5d1a9256bf.png)
+
+
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
