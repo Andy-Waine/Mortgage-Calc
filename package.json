@@ -2,8 +2,8 @@
   "name": "react-calc",
   "version": "0.1.0",
   "engines": {
-    "npm": ">=8.4.1",
-    "node": ">=16.13.2"
+    "npm": ">=8.x.x",
+    "node": ">=16.x.x"
   },
   "private": true,
   "dependencies": {
@@ -42,7 +42,5 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "eslint-plugin-react": "^7.0.0"
   }
 }
