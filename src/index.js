@@ -3,10 +3,8 @@ import { render } from "react-dom";
 import Button from "@material-ui/core/Button";
 import "./index.css";
 
-
-
-//Master Calculator function with hooks
-const CompoundInterest = () => {
+//Main Calculator function with hooks
+const MainCalc = () => {
   const [price, setPrice] = useState();
   const [taxes, setTaxes] = useState();
   const [insurance, setInsurance] = useState();
@@ -14,6 +12,7 @@ const CompoundInterest = () => {
   const [downPayment, setDownPayment] = useState();
   const [interestRate, setInterestRate] = useState();
   const [months, setMonths] = useState();
+  const [show, setShow] = useState(false);
   const [result, setResult] = useState();
 
   const calculate = () => {
@@ -21,7 +20,7 @@ const CompoundInterest = () => {
     const paymentPI = (interestRate * (price - downPayment)) / (1- (Math.pow((1 + interestRate), (-months))));
 
     //Taxes, Insurance, HOA Dues
-    const paymentTIA = parseInt(hoa) + parseInt(insurance) + parseInt(taxes)
+    const paymentTIA = parseInt(hoa) + parseInt(insurance) + parseInt(taxes);
 
     //Final Result
     const result = paymentPI + paymentTIA;
@@ -85,14 +84,17 @@ const CompoundInterest = () => {
                   className="buttonStyle"
                   onClick={() => {
                     calculate();
+                    setShow(true);
                   }}
                   >
                   Calculate
                 </Button>
               </div>
-              <div class="final-result" style={{ fontSize: "30px" }}>${result}</div>
+              {
+              show?<div class="final-result" style={{ fontSize: "30px" }}>${result}</div>:null
+              }
         </div>
     );
 };
 
-render(<CompoundInterest />, document.querySelector("#root"));
+render(<MainCalc />, document.querySelector("#root"));
