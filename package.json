@@ -2,8 +2,8 @@
   "name": "react-calc",
   "version": "0.1.0",
   "engines": {
-    "npm": ">=8.x.x",
-    "node": ">=16.x.x"
+    "npm": "8.5.0",
+    "node": "17.4.0"
   },
   "private": true,
   "dependencies": {
