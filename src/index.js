@@ -91,7 +91,7 @@ const MainCalc = () => {
                 </Button>
               </div>
               {
-              show?<div class="final-result" style={{ fontSize: "30px" }}>${result}</div>:null
+              show?<div className="final-result" style={{ fontSize: "30px" }}>${result}</div>:null
               }
         </div>
     );
