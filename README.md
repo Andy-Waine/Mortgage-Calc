@@ -1,5 +1,5 @@
 <h1 align="center"> Mortgage Calc </h1>
-</br>
+
 <h3 align="center">👉 https://mortgage-calc-react-js.herokuapp.com/ 👈 </h3>
 
 ## Description
