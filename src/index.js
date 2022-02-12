@@ -97,4 +97,5 @@ const MainCalc = () => {
     );
 };
 
+
 render(<MainCalc />, document.querySelector("#root"));
