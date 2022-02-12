@@ -1,6 +1,6 @@
 <h1 align="center"> Mortgage Calc </h1>
 </br>
-<h3 align="center"> 💻 Deployed Here: 👉 https://mortgage-calc-react-js.herokuapp.com/ 👈 </h3>
+<h3 align="center">👉 https://mortgage-calc-react-js.herokuapp.com/ 👈 </h3>
 
 ## Description
 🔍 Calculate your full Mortgage Payment with this React/JS-based Mortgage Calculator embedded within a sleek UI.
