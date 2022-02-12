@@ -33,8 +33,6 @@ This application is covered by the MIT license.
 👪 Andy Waine
 
 ## Questions
-✋ <br />
-<br />
-:octocat: Find me on GitHub: [Andy-Waine](https://github.com/Andy-Waine)<br />
-<br />
 ✉️ Email me with any questions: waine.andrew@protonmail.com<br /><br />
+:octocat: Find me on GitHub: [Andy-Waine](https://github.com/Andy-Waine)<br />
+
