@@ -1,4 +1,4 @@
-<h1 align="center">💰🏡 Mortgage Calc 🏡💰</h1>
+<h1 align="center"🏡 Mortgage Calc 🏡</h1>
 
 <h3 align="center">👉 https://mortgage-calc-react-js.herokuapp.com/ 👈 </h3>
 
