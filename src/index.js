@@ -5,13 +5,13 @@ import "./index.css";
 
 //Main Calculator function with hooks
 const MainCalc = () => {
-  const [price, setPrice] = useState();
-  const [taxes, setTaxes] = useState();
-  const [insurance, setInsurance] = useState();
-  const [hoa, setHoa] = useState();
-  const [downPayment, setDownPayment] = useState();
-  const [interestRate, setInterestRate] = useState();
-  const [months, setMonths] = useState();
+  const [price, setPrice] = useState(0);
+  const [taxes, setTaxes] = useState(0);
+  const [insurance, setInsurance] = useState(0);
+  const [hoa, setHoa] = useState(0);
+  const [downPayment, setDownPayment] = useState(0);
+  const [interestRate, setInterestRate] = useState(0);
+  const [months, setMonths] = useState(0);
   const [show, setShow] = useState(false);
   const [result, setResult] = useState();
 
