@@ -20,7 +20,7 @@ const MainCalc = () => {
     const paymentPI = (interestRate * (price - downPayment)) / (1- (Math.pow((1 + interestRate), (-months))));
 
     //Taxes, Insurance, HOA Dues
-    const paymentTIA = parseInt(hoa) + parseInt(insurance) + parseInt(taxes);
+    const paymentTIA = Number(hoa) + Number(insurance) + Number(taxes);
 
     //Final Result
     const result = paymentPI + paymentTIA;
